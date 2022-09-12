@@ -24,15 +24,14 @@ def main(instancia):
     G = g.criaGrafo(matriz)
     print(G, '\n') # Mostra as características do grafo.
 
-    vis.visualizarGrafo(True, G)  # True para visualização do grafo ou False.
+    vis.visualizarGrafo(False, G)  # True para visualização do grafo ou False.
 
     funcao1 = car.verificaAdjacencia(matriz, 0, 1)
 
     tipo = car.tipoGrafo(matriz) # Mostra o tipo do grafo
     print("Tipo do grafo: %s \n" % tipo)
 
-    densidade = car.calcDensidade(matriz)
-    print("Densidade do grafo: %.3f" % densidade, '\n') # Mostra a desidade do grafo
+    car.calcDensidade(matriz) #Mostra a densidade do grafo
 
     car.insereAresta(matriz, 1, 3)  #Insere aresta na matriz
 

@@ -16,7 +16,7 @@ Entrada: instancia (nome do arquivo .txt do dataset em forma de matriz de adjac�
 Saída: matriz de adjacência (tipo NumPy.ndarray)'''
 def criaMatrizAdjacencias(instancia):
     print('NOME DA INSTÂNCIA:', instancia, '\n')
-    caminho = 'C:/Users/faria/OneDrive/Documentos/Repositorios/AlgoritmosEGrafos/Ativ3/Instancias/' + instancia + '.txt'
+    caminho = 'C:/Users/faria/OneDrive/Documentos/Repositorios/AlgoritmosEGrafos/Ativ03/Instancias/' + instancia + '.txt'
     with open(caminho, 'rb') as f:
         data = np.genfromtxt(f, dtype="int64") #OBS. Lê arquivo .txt de uma Instancia no formato Matriz de Adjacência
     return data
@@ -28,6 +28,6 @@ def salvaResultado(resultado):
     stringRes = ''
     for res in resultado:
         stringRes += str(res) + ' '
-    arquivo = open('C:/Users/faria/OneDrive/Documentos/Repositorios/AlgoritmosEGrafos/Ativ3/Resultados/resultado.txt', 'a+')
+    arquivo = open('C:/Users/faria/OneDrive/Documentos/Repositorios/AlgoritmosEGrafos/Ativ03/Resultados/resultado.txt', 'a+')
     arquivo.writelines(stringRes + '\n')
     arquivo.close()

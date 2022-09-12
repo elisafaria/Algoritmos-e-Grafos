@@ -108,7 +108,10 @@ def calcDensidade(matriz):
         D = (2 * qtdArestas)/(qtdVertices*(qtdVertices - 1)) #formula para calcular densidade de grafo simples
     else:
         D = (arestas/(qtdVertices * (qtdVertices - 1))) #formula para calcular densidade de grafo direcionado
-    return D
+
+    dimensao = round(D, 3) #arredonda o número com precisão de 3 casas decimais
+    print("Densidade do grafo: %.3f" % dimensao, '\n')  # Mostra a desidade do grafo
+    return dimensao
 
 """Função que insere uma aresta no grafo considerando o par de vértices vi e vj
 Entrada: matriz de adjacências (numpy.ndarray) e o par de vértices vi e vj
@@ -135,7 +138,7 @@ def insereVertice(matriz, vi):
         print("Inserindo o vértice %d:" %vi)
         matriz = np.insert(matriz, qtdVertices, 0, axis=1) #inserindo coluna
         matriz = np.insert(matriz, qtdVertices, 0, axis=0) #inserindo linha
-        print(matriz, '\n')
+    print(matriz, '\n')
     return matriz
 
 
