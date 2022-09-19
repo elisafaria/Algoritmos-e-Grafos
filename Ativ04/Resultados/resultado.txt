@@ -1,0 +1,7 @@
+exemplo Trueexemplo True 
+ponte None 
+ponte None 
+ponte None 
+ponte True 
+ponte True 
+ponte True 
